@@ -1,7 +1,7 @@
 package com.self.thread;
 
 // separate object for thread and runnable
-public class Main {
+public class FirstExample {
     public static void main(String[] args) {
         Thread thread = new Thread(() -> {
             throw new RuntimeException();
