@@ -1,4 +1,4 @@
-/*
+package com.self.thread;/*
  * MIT License
  *
  * Copyright (c) 2019 Michael Pogrebinsky
@@ -33,7 +33,7 @@ public class OuterThreadDecides {
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new LongComputationTask(new BigInteger("200000"), new BigInteger("100000000")));
 
-        thread.setDaemon(true);
+        thread.setDaemon(true); // prevents a thread from blocking our app from exiting
         thread.start();
         Thread.sleep(100);
         thread.interrupt();
